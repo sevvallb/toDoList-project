@@ -4,12 +4,8 @@ class ToDoList:
         
     def menu(self):
         while self.running:
-            print(" Please select what you want to do :")
-            print("1: Adding task")
-            print("2: Removing task")
-            print("3: Task completed")
-            print("4: Listing task")
-            print("Q: exit")
+            print("Please select what you want to do:\n1: Adding task\n2: Removing task\n3: Task completed\n4: Listing task\nQ: Exit")
+           
             
             selection = input("Your selection is: ")
             if selection == "Q":
@@ -34,6 +30,11 @@ class ToDoList:
         print("Task completed selected.")
     def listingTask(self):
         print("Listing task selected.")
+        
+if __name__ == "__main__":
+    toDo = ToDoList()
+    toDo.menu()
+    
                    
             
             
