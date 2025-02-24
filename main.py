@@ -59,6 +59,19 @@ class ToDoList:
             self.dosyayi_yaz()
             print("Task {task_id} removed")
             
+    def completeTask(self):
+        self.listingTask()
+        task_id = input("Task id you want to mark as comleted: ").strip()
+        if task_id.isdigit():
+            task_id = int(task_id)
+            for task in self.tasks:
+                if task["id"] == task_id:
+                    task["completed"] = True
+                    self.dosyayi_yaz()
+                    print("Task {task_id} mark as completed. ")
+        else:
+            print("Please enter a valid id!")
+              
         
         
 if __name__ == "__main__":
